@@ -61,18 +61,7 @@
 
                     }
                 });
-                // songs = ourSongs;
-                // for (i = 0; i < songs.length; i++){
-                //         var str = "";
-                //         str ="<div id=" + "song" + i + ">";
-                //         str += "<dl><dt style='font-size: 20px; font-weight: 700;'>" + songs[i].title + "</dt>";
-                //         str += "<dt>Artist: " + songs[i].artist + " </dt>";
-                //         str += "<dt id='genre'>Genre: " + songs[i].genre + " </dt>";
-                //         str += "<dt>Released: " + songs[i].year + " </dt>";
-                //         str += "</dl></div>";
 
-                //         theDiv.innerHTML += str;
-                // }
             });
             $("form").submit(function(e){
                 e.preventDefault();
@@ -80,7 +69,10 @@
                 console.log(filter)
                 for (i = 0; i < ourSongs.length; i++){
                     var id = "song" + i;
-                    if (ourSongs[i].genre.includes(filter)){
+                    if (filter === "Select"){
+                        document.getElementById(id).style.display = "block";
+                    }
+                    else if (ourSongs[i].genre.includes(filter)){
                         document.getElementById(id).style.display = "block";
                     }
                     else {
