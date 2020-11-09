@@ -9,30 +9,26 @@
         </script>
     </head>
     <body>
-        <div id="showData"></div>
         <script language="javascript">
-            $(document).ready(function() {
-                document.writeln("hello")
 
+            function prettyPrint(song){
+                var str = "";
+                str ="<div id='song'><dl><dt>" + song.name + "</dt>";
+                str += "<dt>Artist: " + song.artist + " </dt>";
+                str += "<dt>Genre: " + song.genre + " </dt>";
+                str += "<dt>Released: " + song.year + " </dt>";
+                str += "</dl></div>"
+
+                return str;
+            }
+            $(document).ready(function() {
                 $.getJSON("songs.json", function(data){
                     var songs = JSON.stringify(data)
-                    document.writeln(songs)
+                    for (i = 0; i < songs.length; i++){
+                        document.writeln(prettyPrint(songs[i]))
+                    }
                 });
             });
-
-            // var oXHR = new XMLHttpRequest();
-
-            // // Initiate request.
-            // oXHR.onreadystatechange = reportStatus;
-            // oXHR.open("GET", "songs.json", true);  // get json file.
-            // oXHR.send();
-
-            // function reportStatus() {
-            //     if (oXHR.readyState == 4) {		// Check if request is complete.
-            //         // Write data to a DIV element.
-            //         document.getElementById('showData').innerHTML = this.responseText;
-            //     }
-            // }
         </script>
     </body>
 </html>
