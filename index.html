@@ -42,33 +42,42 @@
         </form>
         <div id="data"></div>
         <script language="javascript">
-
-            // function prettyPrint(song){
-            //     var str = "";
-            //     str ="<div id='song'><dl><dt style='font-size: 20px; font-weight: 700;'>" + song.title + "</dt>";
-            //     str += "<dt>Artist: " + song.artist + " </dt>";
-            //     str += "<dt id='genre'>Genre: " + song.genre + " </dt>";
-            //     str += "<dt>Released: " + song.year + " </dt>";
-            //     str += "</dl></div>"
-
-            //     return str;
-            // }
+            var ourSongs;
             $(document).ready(function() {
                 var theDiv = document.getElementById('data');
                 $.getJSON("songs.json", function(songs){
+                    ourSongs = songs;
                     for (i = 0; i < songs.length; i++){
                         var str = "";
-                        str ="<div id='song'><dl><dt style='font-size: 20px; font-weight: 700;'>" + songs[i].title + "</dt>";
+                        str ="<div id='song'" + i + "> " + "<dl><dt style='font-size: 20px; font-weight: 700;'>" + songs[i].title + "</dt>";
                         str += "<dt>Artist: " + songs[i].artist + " </dt>";
                         str += "<dt id='genre'>Genre: " + songs[i].genre + " </dt>";
                         str += "<dt>Released: " + songs[i].year + " </dt>";
                         str += "</dl></div>";
 
-
                         theDiv.innerHTML += str;
 
                     }
                 });
+            });
+
+            // var filter = "";
+
+            // $("select").bind('change', function(){
+            //     filter = $("select").val();
+            // })
+
+            $("form").submit(function(){
+                var filter = $("select").val()
+                for (i = 0; i < ourSongs.length; i++){
+                    var id = "song" + i;
+                    if (ourSongs[i].genre.includes(filter)){
+                        document.getElementById(id).style.display = "none";
+                    }
+                    else {
+                        document.getElementById(id).style.display = "block";
+                    }
+                }
             });
         </script>
     </body>
