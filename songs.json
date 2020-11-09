@@ -1,0 +1,86 @@
+[
+    {
+        "title":"Redemption Song",
+        "artist":"Bob Marley ft The Wailers",
+        "genre":"Reggae",
+        "year":1980
+    },
+    {
+        "title":"Izzo(H.O.V.A.)",
+        "artist":"JAY-Z",
+        "genre":"Hip-Hop",
+        "year":2002
+    },
+    {
+        "title":"Drop It Like It's Hot",
+        "artist":"Snoop Dogg ft Pharrell Williams",
+        "genre":"Hip-Hop",
+        "year":2004
+    },
+    {
+        "title":"Alright",
+        "artist":"Kendrick Lamar",
+        "genre":"Hip-Hop",
+        "year":2015
+    },
+    {
+        "title":"DNA",
+        "artist":"Kendrick Lamar",
+        "genre":"Hip-Hop",
+        "year":2015
+    },
+    {
+        "title":"MOOD 4 EVA",
+        "artist":"Beyonce ft JAY-Z ft Childish Gambino ft Oumou Sangare",
+        "genre":"Rap/Afrobeat/Pop",
+        "year":2019
+    },
+    {
+        "title":"Underdog",
+        "artist":"Alicia Keys",
+        "genre":"Pop",
+        "year":2020
+    },
+    {
+        "title":"Katerina",
+        "artist":"Bruce Melodi",
+        "genre":"Pop",
+        "year":2020
+    },
+    {
+        "title":"Low Key",
+        "artist":"Yvan Buravan",
+        "genre":"Pop",
+        "year":2020
+    },
+    {
+        "title":"Jerusalema",
+        "artist":"Master KG ft Nomcebo Zikode",
+        "genre":"Afrobeat",
+        "year":2020
+    },
+    {
+        "title":"Savage Remix",
+        "artist":"Megan Thee Stallion ft Beyonce",
+        "genre":"Rap/Hip-Hop",
+        "year":2020
+    },
+    {
+        "title":"Rockstar",
+        "artist":"DaBaby ft Roddy Ricch",
+        "genre":"Rap/Hip-Hop",
+        "year":2020
+    },
+    {
+        "title":"POPSTAR",
+        "artist":"DJ Khaled ft Drake",
+        "genre":"Pop/Hip-Hop",
+        "year":2020
+    },
+    {
+        "title":"WAP",
+        "artist":"Cardi B ft Megan Thee Stallion",
+        "genre":"Rap/Hip-Hop",
+        "year":2020
+    }
+]
