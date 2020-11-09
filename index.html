@@ -30,18 +30,17 @@
         </style>
     </head>
     <body>
-        <div>
-            <form>
-                <select>
-                    <option>Rap</option>
-                    <option>Hip-Hop</option>
-                    <option>Afrobeat</option>
-                    <option>Reggae</option>
-                    <option>Pop</option>
-                </select>
-                <input id="filter" type="submit" value="filter"/>
-            </form>
-        </div>
+        <form>
+            <select>
+                <option>Rap</option>
+                <option>Hip-Hop</option>
+                <option>Afrobeat</option>
+                <option>Reggae</option>
+                <option>Pop</option>
+            </select>
+            <input id="filter" type="submit" value="filter"/>
+        </form>
+        <div id="data"></div>
         <script language="javascript">
 
             // function prettyPrint(song){
@@ -55,6 +54,7 @@
             //     return str;
             // }
             $(document).ready(function() {
+                var theDiv = document.getElementById('data');
                 $.getJSON("songs.json", function(songs){
                     for (i = 0; i < songs.length; i++){
                         var str = "";
@@ -62,8 +62,11 @@
                         str += "<dt>Artist: " + songs[i].artist + " </dt>";
                         str += "<dt id='genre'>Genre: " + songs[i].genre + " </dt>";
                         str += "<dt>Released: " + songs[i].year + " </dt>";
-                        str += "</dl></div>"
-                        document.writeln(str);
+                        str += "</dl></div>";
+
+
+                        theDiv.innerHTML += str;
+
                     }
                 });
             });
