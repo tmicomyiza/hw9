@@ -19,20 +19,26 @@
     <body>
         <script language="javascript">
 
-            function prettyPrint(song){
-                var str = "";
-                str ="<div id='song'><dl><dt style='font-size: 20px; font-weight: 700;'>" + song.title + "</dt>";
-                str += "<dt>Artist: " + song.artist + " </dt>";
-                str += "<dt>Genre: " + song.genre + " </dt>";
-                str += "<dt>Released: " + song.year + " </dt>";
-                str += "</dl></div>"
+            // function prettyPrint(song){
+            //     var str = "";
+            //     str ="<div id='song'><dl><dt style='font-size: 20px; font-weight: 700;'>" + song.title + "</dt>";
+            //     str += "<dt>Artist: " + song.artist + " </dt>";
+            //     str += "<dt id='genre'>Genre: " + song.genre + " </dt>";
+            //     str += "<dt>Released: " + song.year + " </dt>";
+            //     str += "</dl></div>"
 
-                return str;
-            }
+            //     return str;
+            // }
             $(document).ready(function() {
-                $.getJSON("songs.json", function(data){
-                    for (i = 0; i < data.length; i++){
-                        document.writeln(prettyPrint(data[i]))
+                $.getJSON("songs.json", function(songs){
+                    for (i = 0; i < songs.length; i++){
+                        var str = "";
+                        str ="<div id='song'><dl><dt style='font-size: 20px; font-weight: 700;'>" + songs[i].title + "</dt>";
+                        str += "<dt>Artist: " + songs[i].artist + " </dt>";
+                        str += "<dt id='genre'>Genre: " + songs[i].genre + " </dt>";
+                        str += "<dt>Released: " + songs[i].year + " </dt>";
+                        str += "</dl></div>"
+                        document.writeln(str)
                     }
                 });
             });
