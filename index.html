@@ -23,9 +23,8 @@
             }
             $(document).ready(function() {
                 $.getJSON("songs.json", function(data){
-                    var songs = JSON.stringify(data)
-                    for (i = 0; i < songs.length; i++){
-                        document.writeln(prettyPrint(songs[i]))
+                    for (i = 0; i < data.length; i++){
+                        document.writeln(prettyPrint(data[i]))
                     }
                 });
             });
