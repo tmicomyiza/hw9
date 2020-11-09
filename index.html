@@ -30,16 +30,18 @@
         </style>
     </head>
     <body>
-        <form>
-            <select>
-                <option>Rap</option>
-                <option>Hip-Hop</option>
-                <option>Afrobeat</option>
-                <option>Reggae</option>
-                <option>Pop</option>
-            </select>
-            <input id="filter" type="submit" value="filter"/>
-        </form>
+        <div>
+            <form>
+                <select>
+                    <option>Rap</option>
+                    <option>Hip-Hop</option>
+                    <option>Afrobeat</option>
+                    <option>Reggae</option>
+                    <option>Pop</option>
+                </select>
+                <input id="filter" type="submit" value="filter"/>
+            </form>
+        </div>
         <script language="javascript">
 
             // function prettyPrint(song){
@@ -61,7 +63,7 @@
                         str += "<dt id='genre'>Genre: " + songs[i].genre + " </dt>";
                         str += "<dt>Released: " + songs[i].year + " </dt>";
                         str += "</dl></div>"
-                        document.writeln(str)
+                        document.writeln(str);
                     }
                 });
             });
